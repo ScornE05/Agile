@@ -35,13 +35,13 @@ public class Pet {
     private String color;
 
     @Column(precision = 5, scale = 2)
-    private Long weight;
+    private Double weight;
 
     @Column(columnDefinition = "TEXT")
     private String description;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private Long price;
+    private Double price;
 
     private String status;
 

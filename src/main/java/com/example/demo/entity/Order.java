@@ -26,7 +26,7 @@ public class Order {
     private User user;
 
     @Column(name = "total_amount", nullable = false, precision = 10, scale = 2)
-    private Long totalAmount;
+    private Double totalAmount;
 
     @Column(name = "shipping_address", nullable = false)
     private String shippingAddress;

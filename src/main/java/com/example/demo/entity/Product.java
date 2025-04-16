@@ -28,10 +28,10 @@ public class Product {
     private String description;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private Long price;
+    private Double price;
 
     @Column(name = "discount_price", precision = 10, scale = 2)
-    private Long discountPrice;
+    private Double discountPrice;
 
     @Column(name = "quantity_in_stock", nullable = false)
     private Integer quantityInStock;

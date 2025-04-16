@@ -13,6 +13,8 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import com.example.demo.exception.ResourceNotFoundException;
+import com.example.demo.Security.UserPrincipal;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -47,10 +49,6 @@ public class UserServiceImpl implements UserService {
         return userRepository.save(user);
     }
 
-    @Override
-    public User createUser(User user) {
-        return null;
-    }
 
     @Override
     @Transactional
