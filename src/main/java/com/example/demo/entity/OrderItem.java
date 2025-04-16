@@ -4,6 +4,8 @@ import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
+
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
@@ -35,7 +37,7 @@ public class OrderItem {
     private Integer quantity;
 
     @Column(name = "unit_price", nullable = false, precision = 10, scale = 2)
-    private Double unitPrice;
+    private BigDecimal unitPrice;
 
     @CreationTimestamp
     @Column(name = "created_at")

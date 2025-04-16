@@ -5,6 +5,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDateTime;
@@ -26,7 +27,7 @@ public class Order {
     private User user;
 
     @Column(name = "total_amount", nullable = false, precision = 10, scale = 2)
-    private Double totalAmount;
+    private BigDecimal totalAmount;
 
     @Column(name = "shipping_address", nullable = false)
     private String shippingAddress;

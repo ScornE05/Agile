@@ -7,6 +7,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDateTime;
@@ -29,7 +30,7 @@ public class Purchase {
     private Supplier supplier;
 
     @Column(name = "total_amount", nullable = false, precision = 10, scale = 2)
-    private Long totalAmount;
+    private BigDecimal totalAmount;
 
     private String status;
 

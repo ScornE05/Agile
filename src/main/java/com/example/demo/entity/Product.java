@@ -5,6 +5,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDateTime;
@@ -28,10 +29,10 @@ public class Product {
     private String description;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private Double price;
+    private BigDecimal price;
 
     @Column(name = "discount_price", precision = 10, scale = 2)
-    private Double discountPrice;
+    private BigDecimal discountPrice;
 
     @Column(name = "quantity_in_stock", nullable = false)
     private Integer quantityInStock;

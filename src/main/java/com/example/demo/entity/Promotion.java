@@ -7,6 +7,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDateTime;
@@ -35,7 +36,7 @@ public class Promotion {
     private String discountType; // PERCENTAGE, FIXED_AMOUNT
 
     @Column(name = "discount_value", nullable = false, precision = 10, scale = 2)
-    private Long discountValue;
+    private BigDecimal discountValue;
 
     @Column(name = "start_date", nullable = false)
     private LocalDateTime startDate;

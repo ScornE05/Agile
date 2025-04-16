@@ -4,6 +4,7 @@ import lombok.*;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import java.time.LocalDateTime;
@@ -35,13 +36,13 @@ public class Pet {
     private String color;
 
     @Column(precision = 5, scale = 2)
-    private Double weight;
+    private BigDecimal weight;
 
     @Column(columnDefinition = "TEXT")
     private String description;
 
     @Column(nullable = false, precision = 10, scale = 2)
-    private Double price;
+    private BigDecimal price;
 
     private String status;
 
