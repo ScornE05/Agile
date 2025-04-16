@@ -1,8 +1,9 @@
 package com.example.demo.service;
-
+import com.example.demo.DTO.UserDTO;
 import com.example.demo.entity.User;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,7 +12,7 @@ public interface UserService {
 
     User createUser(User user);
 
-    User updateUser(User user);
+    User updateUser(Long id, UserDTO userDTO);
 
     Optional<User> getUserById(Long id);
 
@@ -32,4 +33,8 @@ public interface UserService {
     boolean existsByEmail(String email);
 
     long countByRole(String role);
+
+    boolean isPasswordValid(User user, String password);
+
+    UserDetails loadUserByUsername(String username);
 }
